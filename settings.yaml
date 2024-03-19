@@ -32,6 +32,11 @@ spec:
               value: latest_post_grid
             - label: 站点标题
               value: site_title
+        - $formkit: text
+          if: "$get(header_widget).value === site_title"
+          name: backtitle
+          label: 站点标题
+          help: 如果不设置，将使用站点设置的标题
         - $formkit: select
           name: header_background_type
           id: header_background_type
