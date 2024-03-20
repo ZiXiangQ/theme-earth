@@ -48,7 +48,7 @@
       <th:block th:replace="${hero2}" />
     </th:block>
     <th:block th:unless="${hero2 != null}">
-      <th:block th:replace="~{modules/hero2 :: hero2(isHome = true, cover = null, title = null)}" />
+      <th:block th:replace="~{modules/hero2 :: hero(isHome = true, cover = null, title = null)}" />
     </th:block>
     <!------------------------底部-------------------------------->
     <th:block th:replace="~{modules/footer}" />
