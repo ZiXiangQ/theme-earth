@@ -169,6 +169,12 @@ spec:
           label: 首页底部模块
           value: site_title
           options:
+            - label: 无
+              value: none
+            - label: 最新一篇文章
+              value: latest_post
+            - label: 文章网格（最新五篇文章）
+              value: latest_post_grid
             - label: 站点标题
               value: site_title
         - $formkit: text
@@ -224,13 +230,19 @@ spec:
               value: false
 
     - group: footlayout
-      label: 主页底部图布局
+      label: 主页最底部图布局
       formSchema:
         - $formkit: select
           name: header_widget
           label: 首页底部模块
           value: site_title
           options:
+            - label: 无
+              value: none
+            - label: 最新一篇文章
+              value: latest_post
+            - label: 文章网格（最新五篇文章）
+              value: latest_post_grid
             - label: 站点标题
               value: site_title
         - $formkit: text

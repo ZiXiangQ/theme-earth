@@ -1,6 +1,6 @@
 <section th:fragment="hero(isHome, cover, title)">
   <div
-    th:if="${theme.config.foot.header_widget != 'none'} and ${isHome}"
+    th:if="${theme.config.footmidlayout.header_widget != 'none'} and ${isHome}"
     class="bg-cover bg-center bg-no-repeat"
     th:styleappend="${theme.config.footmidlayout.header_background_type == 'image' ? 'background-image: url(' + theme.config.footmidlayout.header_background_image + ');' : 'background: ' + theme.config.footmidlayout.header_background + ';'}"
     th:classappend="${theme.config.footmidlayout.header_widget == 'site_title' ? 'h-96' : ''}"
