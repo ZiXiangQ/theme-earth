@@ -14,8 +14,15 @@
           th:text="${theme.config.footlayout.back_title}"
           class="mr-1 text-5xl text-white font-medium "
           >
-          </a>
+          </a> 
           <span class="text-2xl font-light text-white opacity-50" th:text="${theme.config.footlayout.back_title_sub}"></span>
+          <a
+          th:href="@{${theme.config.footlayout.back_title_url}}"
+          >
+            <div class="bg-blue-500 text-white py-2 px-4 rounded cursor-pointer hover:bg-blue-700">
+              立即前往
+            </div>
+          </a>
         </div>
       </th:block>
     </th:block>

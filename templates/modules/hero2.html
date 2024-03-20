@@ -1,11 +1,11 @@
 <section th:fragment="hero(isHome, cover, title)">
   <div
-    th:if="${theme.config.footlayout.header_widget != 'none'} and ${isHome}"
+    th:if="${theme.config.layout.header_widget != 'none'} and ${isHome}"
     class="bg-cover bg-center bg-no-repeat"
-    th:styleappend="${theme.config.footlayout.header_background_type == 'image' ? 'background-image: url(' + theme.config.footlayout.header_background_image + ');' : 'background: ' + theme.config.footlayout.header_background + ';'}"
-    th:classappend="${theme.config.footlayout.header_widget == 'site_title' ? 'h-96' : ''}"
+    th:styleappend="${theme.config.footmidlayout.header_background_type == 'image' ? 'background-image: url(' + theme.config.footmidlayout.header_background_image + ');' : 'background: ' + theme.config.footmidlayout.header_background + ';'}"
+    th:classappend="${theme.config.footmidlayout.header_widget == 'site_title' ? 'h-96' : ''}"
   >
-    <th:block th:switch="${theme.config.footlayout.header_widget}">
+    <th:block th:switch="${theme.config.footmidlayout.header_widget}">
       <th:block th:case="latest_post" th:with="posts = ${postFinder.list(1,1)}">
         <div class="container mx-auto py-6" th:if="${posts.total gt 0}">
           <th:block th:replace="~{modules/featured-post-card :: featured-post-card(post=${posts.items[0]})}" />
@@ -32,18 +32,18 @@
       <th:block th:case="site_title">
         <div class="container mx-auto ml-100 flex h-full flex-col items-start justify-center gap-3 py-6">
           <a
-          th:href="@{${theme.config.footlayout.back_title_url}}"
-          th:title="${theme.config.footlayout.back_title}"
-          th:text="${theme.config.footlayout.back_title}"
+          th:href="@{${theme.config.footmidlayout.back_title_url}}"
+          th:title="${theme.config.footmidlayout.back_title}"
+          th:text="${theme.config.footmidlayout.back_title}"
           class="mr-1 text-5xl text-gray-900 font-medium "
           >
           </a>
-          <span class="text-2xl font-light text-stone-300 opacity-50" th:text="${theme.config.footlayout.back_title_sub}"></span>
+          <span class="text-2xl font-light text-stone-300 opacity-50" th:text="${theme.config.footmidlayout.back_title_sub}"></span>
         </div>
       </th:block>
     </th:block>
   </div>
-  <th:block th:if="${theme.config.footlayout.content_header} and ${not #strings.isEmpty(cover)}">
+  <th:block th:if="${theme.config.footmidlayout.content_header} and ${not #strings.isEmpty(cover)}">
     <div class="relative">
       <div
         class="before:z-1 relative h-96 bg-cover bg-center bg-no-repeat before:absolute before:inset-0 before:bg-black/40"
