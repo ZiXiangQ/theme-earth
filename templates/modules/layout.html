@@ -15,13 +15,16 @@
     </script>
   </head>
   <body class="bg-slate-50 dark:bg-slate-900">
+    <!------------------------导航栏-------------------------------->
     <th:block th:replace="~{modules/header}" />
+    <!------------------------顶部大图-------------------------------->
     <th:block th:if="${hero != null}">
       <th:block th:replace="${hero}" />
     </th:block>
     <th:block th:unless="${hero != null}">
       <th:block th:replace="~{modules/hero :: hero(isHome = true, cover = null, title = null)}" />
     </th:block>
+    <!------------------------中间文章展示-------------------------------->
     <section class="container mx-auto mt-6 grid grid-cols-4 gap-6" th:classappend="${contentClass}">
       <div class="z-0 col-span-4 sm:col-span-3">
         <th:block th:replace="${content}" />
@@ -33,23 +36,21 @@
         <th:block th:replace="~{modules/sidebar :: sidebar(prepend = null)}" />
       </th:block>
     </section>
-    <section class="container mx-auto mt-6 grid grid-cols-4 gap-6" th:classappend="${contentClass}">
-      <div class="z-0 col-span-4 sm:col-span-3">
-        <th:block th:replace="${content}" />
-      </div>
-      <th:block th:if="${sidebar != null}">
-        <th:block th:replace="${sidebar}" />
-      </th:block>
-      <th:block th:if="${sidebar == null}">
-        <th:block th:replace="~{modules/sidebar :: sidebar(prepend = null)}" />
-      </th:block>
-    </section>
+    <!------------------------底部第一个导航栏-------------------------------->
     <th:block th:if="${hero1 != null}">
       <th:block th:replace="${hero1}" />
     </th:block>
     <th:block th:unless="${hero1 != null}">
-      <th:block th:replace="~{modules/hero1 :: hero(isHome = true, cover = null, title = null)}" />
+      <th:block th:replace="~{modules/hero1 :: hero1(isHome = true, cover = null, title = null)}" />
     </th:block>
+    <!------------------------底部第二个导航栏-------------------------------->
+    <th:block th:if="${hero2 != null}">
+      <th:block th:replace="${hero2}" />
+    </th:block>
+    <th:block th:unless="${hero2 != null}">
+      <th:block th:replace="~{modules/hero2 :: hero2(isHome = true, cover = null, title = null)}" />
+    </th:block>
+    <!------------------------底部-------------------------------->
     <th:block th:replace="~{modules/footer}" />
     <th:block th:if="${footer != null}">
       <th:block th:replace="${footer}" />
