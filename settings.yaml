@@ -84,6 +84,228 @@ spec:
             - label: 隐藏
               value: false
 
+        - $formkit: select
+          name: post_list_layout
+          label: 文章列表布局
+          value: grid_3
+          options:
+            - label: 网格（一行三列）
+              value: grid_3
+            - label: 网格（一行两列）
+              value: grid_2
+            - label: 单条
+              value: single
+          help: "选择单条时，文章卡片的图片将位于左侧"
+        - $formkit: select
+          name: header_widget
+          label: 首页顶部模块
+          value: site_title
+          options:
+            - label: 无
+              value: none
+            - label: 最新一篇文章
+              value: latest_post
+            - label: 文章网格（最新五篇文章）
+              value: latest_post_grid
+            - label: 站点标题
+              value: site_title
+        - $formkit: text
+          name: back_title
+          id: back_title
+          key: back_title
+          label: 首页大图主标题
+          help: 不设置默认为空
+        - $formkit: text
+          name: back_title_sub
+          id: back_title_sub
+          key: back_title_sub
+          label: 首页大图副标题
+          help: 如果不设置，默认为空
+        - $formkit: text
+          name: back_title_url
+          id: back_title_url
+          key: back_title_url
+          label: 首页大图跳转地址
+          help: 如果不设置，默认为空
+        - $formkit: select
+          name: header_background_type
+          id: header_background_type
+          key: header_background_type
+          label: 首页顶部背景
+          value: image
+          options:
+            - label: 手动设置
+              value: manual
+            - label: 图片
+              value: image
+        - $formkit: text
+          if: "$get(header_background_type).value === manual"
+          name: header_background
+          id: header_background
+          key: header_background
+          label: 首页顶部背景
+        - $formkit: attachment
+          if: "$get(header_background_type).value === image"
+          name: header_background_image
+          id: header_background_image
+          key: header_background_image
+          label: 首页顶部背景图片
+          value: /themes/theme-earth/assets/images/default-background-2023-10-12.jpeg
+        - $formkit: radio
+          name: content_header
+          label: 文章页顶部
+          value: true
+          options:
+            - label: 显示
+              value: true
+            - label: 隐藏
+              value: false
+    
+    - group: footlayout
+      label: 主页底部布局
+      formSchema:
+        - $formkit: select
+          name: header_widget
+          label: 首页底部模块
+          value: site_title
+          options:
+            - label: 无
+              value: none
+            - label: 最新一篇文章
+              value: latest_post
+            - label: 文章网格（最新五篇文章）
+              value: latest_post_grid
+            - label: 站点标题
+              value: site_title
+        - $formkit: text
+          name: back_title
+          id: back_title
+          key: back_title
+          label: 首页底部主标题
+          help: 不设置默认为空
+        - $formkit: text
+          name: back_title_sub
+          id: back_title_sub
+          key: back_title_sub
+          label: 首页底部副标题
+          help: 如果不设置，默认为空
+        - $formkit: text
+          name: back_title_url
+          id: back_title_url
+          key: back_title_url
+          label: 首页底部跳转地址
+          help: 如果不设置，默认为空
+        - $formkit: select
+          name: header_background_type
+          id: header_background_type
+          key: header_background_type
+          label: 首页底部背景
+          value: image
+          options:
+            - label: 手动设置
+              value: manual
+            - label: 图片
+              value: image
+        - $formkit: text
+          if: "$get(header_background_type).value === manual"
+          name: header_background
+          id: header_background
+          key: header_background
+          label: 首页底部背景
+        - $formkit: attachment
+          if: "$get(header_background_type).value === image"
+          name: header_background_image
+          id: header_background_image
+          key: header_background_image
+          label: 首页底部背景图片
+          value: /themes/theme-earth/assets/images/default-background-2023-10-12.jpeg
+        - $formkit: radio
+          name: content_header
+          label: 文章页底部
+          value: true
+          options:
+            - label: 显示
+              value: true
+            - label: 隐藏
+              value: false
+
+        - $formkit: select
+          name: post_list_layout
+          label: 文章列表布局
+          value: grid_3
+          options:
+            - label: 网格（一行三列）
+              value: grid_3
+            - label: 网格（一行两列）
+              value: grid_2
+            - label: 单条
+              value: single
+          help: "选择单条时，文章卡片的图片将位于左侧"
+        - $formkit: select
+          name: header_widget
+          label: 首页顶部模块
+          value: site_title
+          options:
+            - label: 无
+              value: none
+            - label: 最新一篇文章
+              value: latest_post
+            - label: 文章网格（最新五篇文章）
+              value: latest_post_grid
+            - label: 站点标题
+              value: site_title
+        - $formkit: text
+          name: back_title
+          id: back_title
+          key: back_title
+          label: 首页大图主标题
+          help: 不设置默认为空
+        - $formkit: text
+          name: back_title_sub
+          id: back_title_sub
+          key: back_title_sub
+          label: 首页大图副标题
+          help: 如果不设置，默认为空
+        - $formkit: text
+          name: back_title_url
+          id: back_title_url
+          key: back_title_url
+          label: 首页大图跳转地址
+          help: 如果不设置，默认为空
+        - $formkit: select
+          name: header_background_type
+          id: header_background_type
+          key: header_background_type
+          label: 首页顶部背景
+          value: image
+          options:
+            - label: 手动设置
+              value: manual
+            - label: 图片
+              value: image
+        - $formkit: text
+          if: "$get(header_background_type).value === manual"
+          name: header_background
+          id: header_background
+          key: header_background
+          label: 首页顶部背景
+        - $formkit: attachment
+          if: "$get(header_background_type).value === image"
+          name: header_background_image
+          id: header_background_image
+          key: header_background_image
+          label: 首页顶部背景图片
+          value: /themes/theme-earth/assets/images/default-background-2023-10-12.jpeg
+        - $formkit: radio
+          name: content_header
+          label: 文章页顶部
+          value: true
+          options:
+            - label: 显示
+              value: true
+            - label: 隐藏
+              value: false
+
     - group: style
       label: 样式
       formSchema:
