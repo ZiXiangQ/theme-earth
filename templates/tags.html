@@ -28,7 +28,7 @@
           <span class="text-sm font-light text-gray-600 dark:text-slate-200">此标签下没有文章</span>
         </div>
 
-        <div th:if="${posts.total gt 10}" class="mt-10 flex justify-end">
+        <div th:if="${posts.total gt 9}" class="mt-10 flex justify-end">
           <a
             class="group inline-flex items-center gap-2 truncate text-sm text-gray-600 hover:text-gray-900 dark:text-slate-100 dark:hover:text-slate-200"
             th:href="@{${tag.status.permalink}}"

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" th:fragment="html (title,hero,head,footer,sidebar,contentClass)">
+<html lang="en" th:fragment="html (title,hero,hero2,head,footer,sidebar,contentClass)">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,7 +25,7 @@
       <th:block th:replace="~{modules/hero :: hero(isHome = true, cover = null, title = null)}" />
     </th:block>
     <!------------------------中间文章展示-------------------------------->
-    <section class="container mx-auto mt-6 grid grid-cols-4 gap-6" th:classappend="${contentClass}">
+    <section class="container mx-auto mt-6 grid grid-cols-4 gap-6" th:classappend="${contentClass}" style="background-color: #F5F8FF;">
       <div class="z-0 col-span-4 sm:col-span-3">
         <th:block th:replace="${content}" />
       </div>
@@ -44,12 +44,12 @@
       <th:block th:replace="~{modules/hero1 :: hero1(isHome = true, cover = null, title = null)}" />
     </th:block> -->
     <!------------------------底部第二个导航栏-------------------------------->
-    <!-- <th:block th:if="${hero2 != null}">
+    <th:block th:if="${hero2 != null}">
       <th:block th:replace="${hero2}" />
     </th:block>
     <th:block th:unless="${hero2 != null}">
       <th:block th:replace="~{modules/hero2 :: hero2(isHome = true, cover = null, title = null)}" />
-    </th:block> -->
+    </th:block>
     <!------------------------底部-------------------------------->
     <th:block th:replace="~{modules/footer}" />
     <th:block th:if="${footer != null}">
