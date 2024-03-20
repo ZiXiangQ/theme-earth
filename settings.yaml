@@ -36,8 +36,20 @@ spec:
           name: back_title
           id: back_title
           key: back_title
-          label: 站点标题
-          help: 如果不设置，将使用站点设置的标题
+          label: 首页大图主标题
+          help: 不设置默认为空
+        - $formkit: text
+          name: back_title_sub
+          id: back_title_sub
+          key: back_title_sub
+          label: 首页大图副标题
+          help: 如果不设置，默认为空
+        - $formkit: text
+          name: back_title_url
+          id: back_title_url
+          key: back_title_url
+          label: 首页大图跳转地址
+          help: 如果不设置，默认为空
         - $formkit: select
           name: header_background_type
           id: header_background_type

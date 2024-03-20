@@ -30,9 +30,16 @@
         </div>
       </th:block>
       <th:block th:case="site_title">
-        <div class="container mx-auto flex h-full flex-col items-center justify-center gap-3 py-6">
-          <span class="text-5xl text-white" th:text="${theme.config.layout.back_title}"></span>
-          <span class="text-sm font-light text-white opacity-50" th:text="${site.subtitle}"></span>
+        <div class="container mx-auto ml-100 flex h-full flex-col items-start justify-center gap-3 py-6">
+          <!-- <span class="text-5xl text-white" th:text="${theme.config.layout.back_title}"></span> -->
+          <a
+          th:href="@{${theme.config.layout.back_title_url}}"
+          th:title="${theme.config.layout.back_title}"
+          th:text="${theme.config.layout.back_title_sub}"
+          class="mr-1 text-sm font-medium text-gray-800 hover:text-gray-900 dark:text-slate-500 dark:hover:text-slate-600"
+          >
+          </a>
+          <span class="text-sm font-light text-white opacity-50" th:text="${theme.config.layout.back_title_sub}"></span>
         </div>
       </th:block>
     </th:block>
