@@ -16,7 +16,13 @@
           >
           </a>
           <span class="text-2xl font-light text-stone-300 opacity-50" th:text="${theme.config.footmidlayout.back_title_sub}"></span>
-          <a href="#" class="bg-blue-700 py-2 px-4 rounded text-white">立即前往</a>
+          <a
+          th:href="@{${theme.config.footmidlayout.back_title_url}}"
+          th:title="立即前往"
+          th:text="${theme.config.footmidlayout.back_title}"
+          class="mr-1 text-5xl text-gray-900 font-medium "
+          >
+          </a>
         </div>
       </th:block>
     </th:block>

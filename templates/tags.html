@@ -9,7 +9,7 @@
     </div>
 
     <th:block th:with="tag = ${tagFinder.list(1,1).items[0]}">
-      <th:block th:if="${tag}" th:with="posts = ${postFinder.listByTag(1,9,tag.metadata.name)}">
+      <th:block th:if="${tag}" th:with="posts = ${postFinder.listByTag(1,6,tag.metadata.name)}">
         <div
           id="post-list"
           th:if="${posts.total gt 0}"
