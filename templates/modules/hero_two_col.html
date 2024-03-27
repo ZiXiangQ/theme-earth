@@ -1,0 +1,70 @@
+<section th:fragment="hero(isHome, cover, title)">
+  <div style="display: flex;">
+    <!-- 左侧占40% -->
+    <div style="width: 40%;">
+      <!-- 这里放原来 section 中左侧的内容 -->
+      <div
+        th:if="${theme.config.layout.header_widget != 'none'} and ${isHome}"
+        class="bg-cover bg-center bg-no-repeat"
+        th:styleappend="${theme.config.midEnter.left_background_type == 'image' ? 'background-image: url(' + theme.config.midEnter.left_background_image + ');' : 'background: ' + theme.config.midEnter.left_background_image + ';'}"
+        th:classappend="${theme.config.midEnter.header_widget_left == 'site_title' ? 'h-96' : ''}"
+      >
+        <th:block th:switch="${theme.config.midEnter.header_widget_left}">
+          <th:block th:case="site_title">
+            <div class="container mx-auto flex h-full flex-col items-end justify-center gap-3 py-6">
+              <a
+                th:href="@{${theme.config.midEnter.title_url_left}}"
+                th:title="${theme.config.midEnter.main_title_left}"
+                th:text="${theme.config.midEnter.main_title_left}"
+                class="mr-1 text-5xl text-gray-900 font-medium "
+              >
+              </a>
+              <span class="text-2xl font-light text-stone-300 opacity-50" th:text="${theme.config.midEnter.sec_title_left}"></span>
+              <a
+                th:href="@{${theme.config.midEnter.title_url_left}}"
+                th:title="立即前往"
+                th:text="立即前往"
+                class="mr-1 text-3xl text-white font-medium bg-blue-900 px-4 py-2 rounded "
+                style="background-color: #0D2A5D; padding: 8px 16px; border-radius: 4px;"
+              >
+              </a>
+            </div>
+          </th:block>
+        </th:block>
+      </div>
+    </div>
+    <!-- 右侧占60% -->
+    <div style="width: 60%;">
+      <!-- 这里放原来 section 中右侧的内容 -->
+      <div
+        th:if="${theme.config.layout.header_widget != 'none'} and ${isHome}"
+        class="bg-cover bg-center bg-no-repeat"
+        th:styleappend="${theme.config.midEnter.right_background_type == 'image' ? 'background-image: url(' + theme.config.midEnter.right_background_image + ');' : 'background: ' + theme.config.midEnter.right_background_image + ';'}"
+        th:classappend="${theme.config.midEnter.header_widget_right == 'site_title' ? 'h-96' : ''}"
+      >
+        <th:block th:switch="${theme.config.midEnter.header_widget_right}">
+          <th:block th:case="site_title">
+            <div class="container mx-auto flex h-full flex-col items-end justify-center gap-3 py-6">
+              <a
+                th:href="@{${theme.config.midEnter.title_url_right}}"
+                th:title="${theme.config.midEnter.main_title_right}"
+                th:text="${theme.config.midEnter.main_title_right}"
+                class="mr-1 text-5xl text-gray-900 font-medium "
+              >
+              </a>
+              <span class="text-2xl font-light text-stone-300 opacity-50" th:text="${theme.config.midEnter.sec_title_right}"></span>
+              <a
+                th:href="@{${theme.config.midEnter.title_url_right}}"
+                th:title="立即前往"
+                th:text="立即前往"
+                class="mr-1 text-3xl text-white font-medium bg-blue-900 px-4 py-2 rounded "
+                style="background-color: #0D2A5D; padding: 8px 16px; border-radius: 4px;"
+              >
+              </a>
+            </div>
+          </th:block>
+        </th:block>
+      </div>
+    </div>
+  </div>
+</section>

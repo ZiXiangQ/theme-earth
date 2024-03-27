@@ -32,19 +32,19 @@
       <th:block th:if="${sidebar == null}">
         <th:block th:replace="~{modules/sidebar :: sidebar(prepend = null)}" />
       </th:block>
-      <th:block th:if="${hero1 != null}">
-        <th:block th:replace="${hero1}" />
-      </th:block>
-      <th:block th:unless="${hero1 != null}">
-        <th:block th:replace="~{modules/hero1 :: hero(isHome = true, cover = null, title = null)}" />
-      </th:block>
-      <th:block th:if="${hero2 != null}">
-        <th:block th:replace="${hero2}" />
-      </th:block>
-      <th:block th:unless="${hero2 != null}">
-        <th:block th:replace="~{modules/hero2 :: hero(isHome = true, cover = null, title = null)}" />
-      </th:block>
     </section>
+    <th:block th:if="${hero1 != null}">
+      <th:block th:replace="${hero1}" />
+    </th:block>
+    <th:block th:unless="${hero1 != null}">
+      <th:block th:replace="~{modules/hero1 :: hero(isHome = true, cover = null, title = null)}" />
+    </th:block>
+    <th:block th:if="${hero2 != null}">
+      <th:block th:replace="${hero2}" />
+    </th:block>
+    <th:block th:unless="${hero2 != null}">
+      <th:block th:replace="~{modules/hero2 :: hero(isHome = true, cover = null, title = null)}" />
+    </th:block>
     <th:block th:replace="~{modules/footer}" />
     <th:block th:if="${footer != null}">
       <th:block th:replace="${footer}" />
