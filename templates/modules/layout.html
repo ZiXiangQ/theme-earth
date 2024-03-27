@@ -33,6 +33,12 @@
         <th:block th:replace="~{modules/sidebar :: sidebar(prepend = null)}" />
       </th:block>
     </section>
+    <th:block th:if="${hero_two_col != null}">
+      <th:block th:replace="${hero1}" />
+    </th:block>
+    <th:block th:unless="${hero_two_col != null}">
+      <th:block th:replace="~{modules/hero_two_col :: hero(isHome = true, cover = null, title = null)}" />
+    </th:block>
     <th:block th:if="${hero1 != null}">
       <th:block th:replace="${hero1}" />
     </th:block>
