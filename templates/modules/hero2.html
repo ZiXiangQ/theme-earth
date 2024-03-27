@@ -7,7 +7,7 @@
   >
     <th:block th:switch="${theme.config.footlayout.header_widget}">
       <th:block th:case="site_title">
-        <div class="container mx-auto ml-100 flex h-full flex-col items-start justify-center gap-3 py-6">
+        <div class="container mx-auto flex h-full flex-col items-end justify-center gap-3 py-6">
           <a
           th:href="@{${theme.config.footlayout.back_title_url}}"
           th:title="${theme.config.footlayout.back_title}"
