@@ -1,11 +1,11 @@
 <section th:fragment="hero(isHome, cover, title)">
-  <div style="display: flex;">
+  <div style="display: flex; background-color: aliceblue;" class="dark:bg-slate-900">
     <!-- 左侧占40% -->
     <div style="width: 50%;">
       <!-- 这里放原来 section 中左侧的内容 -->
       <div
         th:if="${theme.config.layout.header_widget != 'none'} and ${isHome}"
-        class="bg-cover bg-center bg-no-repeat flex justify-center"
+        class="bg-cover bg-center bg-no-repeat flex justify-end"
         style="width:50%;"
         th:styleappend="${theme.config.midEnter.left_background_type == 'image' ? 'background-image: url(' + theme.config.midEnter.left_background_image + ');' : 'background: ' + theme.config.midEnter.left_background_image + ';'}"
         th:classappend="${theme.config.midEnter.header_widget_left == 'site_title' ? 'h-96' : ''}"
@@ -20,7 +20,7 @@
                 class="mr-1 text-5xl text-white font-medium "
               >
               </a>
-              <span class="text-xl font-light text-white opacity-50" th:text="${theme.config.midEnter.sec_title_left}"></span>
+              <span style="width: max-content;" class="text-xl font-light text-white opacity-50" th:text="${theme.config.midEnter.sec_title_left}"></span>
               <a
                 th:href="@{${theme.config.midEnter.title_url_left}}"
                 th:title="立即前往"
@@ -39,7 +39,7 @@
       <!-- 这里放原来 section 中右侧的内容 -->
       <div
         th:if="${theme.config.layout.header_widget != 'none'} and ${isHome}"
-        class="bg-cover bg-center bg-no-repeat flex justify-center"
+        class="bg-cover bg-center bg-no-repeat flex justify-end"
         style="width: 68%;"
         th:styleappend="${theme.config.midEnter.right_background_type == 'image' ? 'background-image: url(' + theme.config.midEnter.right_background_image + ');' : 'background: ' + theme.config.midEnter.right_background_image + ';'}"
         th:classappend="${theme.config.midEnter.header_widget_right == 'site_title' ? 'h-96' : ''}"
@@ -54,7 +54,7 @@
                 class="mr-1 text-5xl text-white font-medium "
               >
               </a>
-              <span class="text-2xl font-light text-white opacity-50" th:text="${theme.config.midEnter.sec_title_right}"></span>
+              <span style="width: max-content;" class="text-2xl font-light text-white opacity-50" th:text="${theme.config.midEnter.sec_title_right}"></span>
               <a
                 th:href="@{${theme.config.midEnter.title_url_right}}"
                 th:title="立即前往"
