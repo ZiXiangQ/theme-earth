@@ -12,7 +12,7 @@
       >
         <th:block th:switch="${theme.config.midEnter.header_widget_left}">
           <th:block th:case="site_title">
-            <div class="container mx-auto flex h-full flex-col items-end justify-center gap-3 py-6">
+            <div style="margin-right: 60px;" class="container mx-auto flex h-full flex-col items-end justify-center gap-3 py-6">
               <a
                 th:href="@{${theme.config.midEnter.title_url_left}}"
                 th:title="${theme.config.midEnter.main_title_left}"
@@ -20,13 +20,13 @@
                 class="mr-1 text-5xl text-white font-medium "
               >
               </a>
-              <span style="width: fit-content;" class="text-xl font-light text-white opacity-50" th:text="${theme.config.midEnter.sec_title_left}"></span>
+              <span style="width: fit-content;margin-top: 30px;" class="text-xl font-light text-white opacity-50" th:text="${theme.config.midEnter.sec_title_left}"></span>
               <a
                 th:href="@{${theme.config.midEnter.title_url_left}}"
                 th:title="立即前往"
                 th:text="立即前往"
                 class="mr-1 text-3xl text-white font-medium bg-blue-900 px-4 py-2 rounded "
-                style=" margin-top:120px;background-color: #0D2A5D;width: 100px; padding: 8px 16px; border-radius: 4px;"
+                style=" margin-top:200px;background-color: #0D2A5D;width: 100px; padding: 8px 16px; border-radius: 4px;"
               >
               </a>
             </div>
@@ -46,7 +46,7 @@
       >
         <th:block th:switch="${theme.config.midEnter.header_widget_right}">
           <th:block th:case="site_title">
-            <div style="width:68%" class="container mx-auto flex h-full flex-col items-end justify-center gap-3 py-6">
+            <div style="width:68%;margin-right: 60px;" class="container mx-auto flex h-full flex-col items-end justify-center gap-3 py-6">
               <a
                 th:href="@{${theme.config.midEnter.title_url_right}}"
                 th:title="${theme.config.midEnter.main_title_right}"
@@ -54,13 +54,13 @@
                 class="mr-1 text-5xl text-white font-medium "
               >
               </a>
-              <span style="width: fit-content;" class="text-2xl font-light text-white opacity-50" th:text="${theme.config.midEnter.sec_title_right}"></span>
+              <span style="width: fit-content;margin-top: 30px;" class="text-2xl font-light text-white opacity-50" th:text="${theme.config.midEnter.sec_title_right}"></span>
               <a
                 th:href="@{${theme.config.midEnter.title_url_right}}"
                 th:title="立即前往"
                 th:text="立即前往"
                 class="mr-1 text-3xl text-white font-medium bg-blue-900 px-4 py-2 rounded "
-                style="margin-top:120px;background-color: #0D2A5D;width: 100px; padding: 8px 16px; border-radius: 4px;"
+                style="margin-top:200px;background-color: #0D2A5D;width: 100px; padding: 8px 16px; border-radius: 4px;"
               >
               </a>
             </div>
