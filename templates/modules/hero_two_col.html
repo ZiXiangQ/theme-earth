@@ -1,5 +1,5 @@
 <section th:fragment="hero(isHome, cover, title)">
-  <div style="display: flex;margin: 0 10px;" class="dark:bg-slate-900 bg-slate-50">
+  <div style="display: flex; margin: 20px;" class="dark:bg-slate-900 bg-slate-50">
     <!-- 左侧占40% -->
     <div style="width: 50%;">
       <!-- 这里放原来 section 中左侧的内容 -->
@@ -12,7 +12,7 @@
       >
         <th:block th:switch="${theme.config.midEnter.header_widget_left}">
           <th:block th:case="site_title">
-            <div style="margin-right: 60px;" class="container mx-auto flex h-full flex-col items-end justify-center gap-3 py-6">
+            <div style="margin-right: 60px;" class="flex flex-col items-start justify-center">
               <a
                 th:href="@{${theme.config.midEnter.title_url_left}}"
                 th:title="${theme.config.midEnter.main_title_left}"
@@ -46,7 +46,7 @@
       >
         <th:block th:switch="${theme.config.midEnter.header_widget_right}">
           <th:block th:case="site_title">
-            <div style="width:68%;margin-right: 60px;" class="container mx-auto flex h-full flex-col items-end justify-center gap-3 py-6">
+            <div style="width:68%;margin-right: 60px;" class=" flex  flex-col items-start justify-center">
               <a
                 th:href="@{${theme.config.midEnter.title_url_right}}"
                 th:title="${theme.config.midEnter.main_title_right}"
