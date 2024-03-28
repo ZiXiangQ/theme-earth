@@ -6,7 +6,7 @@
       <div
         th:if="${theme.config.layout.header_widget != 'none'} and ${isHome}"
         class="bg-cover bg-center bg-no-repeat flex justify-end"
-        style="width:50%;margin-left:250px;"
+        style="width:51%;margin-left:250px;"
         th:styleappend="${theme.config.midEnter.left_background_type == 'image' ? 'background-image: url(' + theme.config.midEnter.left_background_image + ');' : 'background: ' + theme.config.midEnter.left_background_image + ';'}"
         th:classappend="${theme.config.midEnter.header_widget_left == 'site_title' ? 'h-96' : ''}"
       >
@@ -60,7 +60,7 @@
                 th:title="立即前往"
                 th:text="立即前往"
                 class="mr-1 text-3xl text-white font-medium bg-blue-900 px-4 py-2 rounded "
-                style="margin-bottom:120px;background-color: #0D2A5D;width: 100px; padding: 8px 16px; border-radius: 4px;"
+                style="margin-top:120px;background-color: #0D2A5D;width: 100px; padding: 8px 16px; border-radius: 4px;"
               >
               </a>
             </div>
