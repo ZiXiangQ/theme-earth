@@ -1,12 +1,12 @@
 <section th:fragment="hero(isHome, cover, title)">
-  <div style="display: flex; background-color: aliceblue;" class="dark:bg-slate-900">
+  <div style="display: flex;margin: 0 10px;" class="dark:bg-slate-900 bg-slate-50">
     <!-- 左侧占40% -->
     <div style="width: 50%;">
       <!-- 这里放原来 section 中左侧的内容 -->
       <div
         th:if="${theme.config.layout.header_widget != 'none'} and ${isHome}"
         class="bg-cover bg-center bg-no-repeat flex justify-end"
-        style="width:50%;"
+        style="width:50%;margin-left:250px;"
         th:styleappend="${theme.config.midEnter.left_background_type == 'image' ? 'background-image: url(' + theme.config.midEnter.left_background_image + ');' : 'background: ' + theme.config.midEnter.left_background_image + ';'}"
         th:classappend="${theme.config.midEnter.header_widget_left == 'site_title' ? 'h-96' : ''}"
       >
@@ -20,13 +20,13 @@
                 class="mr-1 text-5xl text-white font-medium "
               >
               </a>
-              <span style="width: max-content;" class="text-xl font-light text-white opacity-50" th:text="${theme.config.midEnter.sec_title_left}"></span>
+              <span style="width: fit-content;" class="text-xl font-light text-white opacity-50" th:text="${theme.config.midEnter.sec_title_left}"></span>
               <a
                 th:href="@{${theme.config.midEnter.title_url_left}}"
                 th:title="立即前往"
                 th:text="立即前往"
                 class="mr-1 text-3xl text-white font-medium bg-blue-900 px-4 py-2 rounded "
-                style="background-color: #0D2A5D;width: 100px; padding: 8px 16px; border-radius: 4px;"
+                style=" margin-top:100px;background-color: #0D2A5D;width: 100px; padding: 8px 16px; border-radius: 4px;"
               >
               </a>
             </div>
@@ -60,7 +60,7 @@
                 th:title="立即前往"
                 th:text="立即前往"
                 class="mr-1 text-3xl text-white font-medium bg-blue-900 px-4 py-2 rounded "
-                style="background-color: #0D2A5D;width: 100px; padding: 8px 16px; border-radius: 4px;"
+                style="margin-top:100px;background-color: #0D2A5D;width: 100px; padding: 8px 16px; border-radius: 4px;"
               >
               </a>
             </div>
