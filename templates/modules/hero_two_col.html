@@ -1,12 +1,12 @@
 <section th:fragment="hero(isHome, cover, title)">
-  <div style="display: flex; margin: 20px; flex-wrap: wrap; justify-content: space-between;" class="dark:bg-slate-900 bg-slate-50">
+  <div style="display: flex; margin: 10px; flex-wrap: wrap; justify-content: space-between;" class="dark:bg-slate-900 bg-slate-50">
     <!-- 左侧占40% -->
-    <div style="width: 40%;">
+    <div style="width: 50%;">
       <!-- 这里放原来 section 中左侧的内容 -->
       <div
         th:if="${theme.config.layout.header_widget != 'none'} and ${isHome}"
         class="bg-cover bg-center bg-no-repeat flex justify-end"
-        style="width:100%;margin-left:200px;"
+        style="width:100%;"
         th:styleappend="${theme.config.midEnter.left_background_type == 'image' ? 'background-image: url(' + theme.config.midEnter.left_background_image + ');' : 'background: ' + theme.config.midEnter.left_background_image + ';'}"
         th:classappend="${theme.config.midEnter.header_widget_left == 'site_title' ? 'h-96' : ''}"
       >
@@ -27,7 +27,7 @@
       </div>
     </div>
     <!-- 右侧占60% -->
-    <div style="width: 40%;">
+    <div style="width: 50%;">
       <!-- 这里放原来 section 中右侧的内容 -->
       <div
         th:if="${theme.config.layout.header_widget != 'none'} and ${isHome}"
@@ -38,7 +38,7 @@
       >
         <th:block th:switch="${theme.config.midEnter.header_widget_right}">
           <th:block th:case="site_title">
-            <div style="width:100%;margin-right: 50px;" class=" flex  flex-col items-start justify-center">
+            <div style="width:100%;margin:50px;" class=" flex  flex-col items-start justify-center">
               <a
                 th:href="@{${theme.config.midEnter.title_url_right}}"
                 th:title="${theme.config.midEnter.main_title_right}"
