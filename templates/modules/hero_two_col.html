@@ -42,6 +42,16 @@
         </th:block>
       </th:block>
     </div>
+    <a
+    th:href="@{${theme.config.midEnter.title_url_right_ai}}"
+    class="mr-1 text-5xl text-white font-medium "
+    >
+      <div
+      th:if="${theme.config.layout.header_widget != 'none'} and ${isHome}"
+      class="bg-cover bg-center bg-no-repeat flex justify-end"
+      th:styleappend="${theme.config.midEnter.right_background_type_ai == 'image' ? 'background-image: url(' + theme.config.midEnter.right_background_image_ai + ');' : 'background: ' + theme.config.midEnter.right_background_image_ai + ';'}"
+      ></div>
+    </a>
   </div>
   
   <style>

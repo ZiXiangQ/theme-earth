@@ -333,6 +333,36 @@ spec:
           key: right_background_image
           label: 右侧背景图片
           value: /themes/theme-earth/assets/images/default-background-2023-10-12.jpeg
+        - $formkit: text
+          name: title_url_right_ai
+          id: title_url_right_ai
+          key: title_url_right_ai
+          label: 右侧智能ai跳转地址
+          help: 如果不设置，默认为空
+        - $formkit: select
+          name: right_background_type_ai
+          id: right_background_type_ai
+          key: right_background_type_ai
+          label: 右侧背景
+          value: image
+          options:
+            - label: 手动设置
+              value: manual
+            - label: 图片
+              value: image
+        - $formkit: text
+          if: "$get(right_background_type_ai).value === manual"
+          name: right_background_ai
+          id: right_background_ai
+          key: right_background_ai
+          label: 右侧背景
+        - $formkit: attachment
+          if: "$get(right_background_type).value === image"
+          name: right_background_image_ai
+          id: right_background_image_ai
+          key: right_background_image_ai
+          label: 右侧智能ai背景图片
+          value: /themes/theme-earth/assets/images/default-background-2023-10-12.jpeg
 
     - group: style
       label: 样式
